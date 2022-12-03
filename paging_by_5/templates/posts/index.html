@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Example application</title>
+  </head>
+  <body>
+<!-- BEGIN (write your solution here) -->
+  <ul>
+    {% for post in posts %}
+    <li>
+      <a href="{{ url_for('get_post', slug=post.slug) }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  
+  <br>
+  
+  <div>
+    <a href="?page={{ 1 if page < 2 else page - 1 }}">Prev</a> <a href="?page={{ page + 1 }}">Next</a>
+  </div>
+<!-- END -->
+  </body>
+</html>
