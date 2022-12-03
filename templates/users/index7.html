@@ -1,0 +1,19 @@
+{% block content %}
+    <h1>Sign In</h1>
+    <form action="/login" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}
+        </p>
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=32) }}
+        </p>
+        <p>
+            {{ form.submit.label }}<br>
+            {{ form.submit(size=32) }}
+        </p>
+    </form>
+    <h1> {{ errors }} </h1>
+{% endblock %}

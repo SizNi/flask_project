@@ -1,0 +1,14 @@
+<form action="/courses" method="get">
+    <input type="search" name="term" value="{{ search }}" />
+    <input type="submit" value="Search" />
+</form>
+<hr>
+<table>
+    {% for user in courses %}
+    <tr>
+      <td>
+        {{ user}}
+      </td>
+    </tr>
+    {% endfor %}
+</table>
